@@ -1,0 +1,61 @@
+.tabel-1 {
+    width:auto;
+    height:500px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: #ffffff;
+    
+}
+
+.kepuasan{
+    color: #13b2d6;
+    margin: center;
+    margin-left: 35px;
+    margin-right: 30px;
+}
+
+.gambar-1{
+    padding: 20px;
+    width: 230px;
+    height: 100px;
+    border-radius: 50px;
+    transform: translate(9px,-20px);
+}
+
+
+
+.keterangan-1{
+    margin:4px;
+}
+.keterangan-2{
+    margin:4px;
+}
+.keterangan-3{
+    margin:4px;
+}
+
+.baris-1 {
+    padding:0px;
+    margin:0px;
+    
+}
+
+.satu{
+    padding: 20px;
+}
+.dua{
+    padding: 20px;
+}
+.tiga{
+    padding: 20px;
+}
+.empat{
+    padding: 20px;
+}
+.lima{
+    padding: 20px;
+    column-rule: ;
+}
+
+
+
