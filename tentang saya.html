@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">Logo</div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html">Produk</a></li>
+                <li class="nav-item"><a href="kontak.html">Kontak</a></li>
+                <li class="nav-item"><a href="tentang saya.html">Tentang Saya</a></li>
+            </ul>
+            <button class="hamburger" onclick="toggleMenu()">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <section id="tentang">
+        <div class="container">
+            <h2>Siapa Kami?</h2>
+            <p>Kami adalah toko gitar yang berdedikasi untuk menyediakan berbagai pilihan gitar berkualitas tinggi bagi musisi dari semua level. Dengan pengalaman bertahun-tahun di industri ini, kami mengerti pentingnya memiliki instrumen yang tepat untuk meningkatkan permainan musik Anda.</p>
+            
+            <h3>Misi Kami</h3>
+            <p>Misi kami adalah memberikan pelayanan terbaik dan menawarkan gitar terbaik yang bisa didapatkan. Kami berkomitmen untuk menjadi tempat favorit bagi para pecinta musik dalam menemukan gitar impian mereka.</p>
+
+            <h3>Visi Kami</h3>
+            <p>Kami berusaha untuk menjadi toko gitar terkemuka dengan fokus pada kepuasan pelanggan, kualitas produk, dan inovasi dalam pelayanan.</p>
+
+            <h3>Kenapa Memilih Kami?</h3>
+            <ul>
+                <li>Produk berkualitas tinggi</li>
+                <li>Harga bersaing</li>
+                <li>Pelayanan pelanggan yang ramah dan responsif</li>
+                <li>Pengalaman belanja online yang mudah dan aman</li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            navMenu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
