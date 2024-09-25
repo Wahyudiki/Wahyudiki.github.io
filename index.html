@@ -3,35 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Navbar</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+
     <nav class="navbar">
-        <div class="navbar-container">
-            <div class="logo">Toko Gitar Milenial</div>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html">Produk</a></li>
-                <li class="nav-item"><a href="kontak.html">Kontak</a></li>
-                <li class="nav-item"><a href="tentang saya.html">Tentang Saya</a></li>
-            </ul>
-            <button class="hamburger" onclick="toggleMenu()">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
+        <a href="#" class="Logo"toko gitar>TOKO GITAR MILENIAL</a>
+        <div class="toggle-menu" id="toogle-menu">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
+
+        <l class="navbar-nav" id="navbar-nav">
+            <li><a href="index.html" class="nav-link">Produk</a></li>
+            <li><a href="tentangkami.html" class="nav-link">Tentang Kami</a></li>
+            <li><a href="kontak.html" class="nav-link">Kontak</a></li>
+        </l>
     </nav>
 
- 
-    <h1 class="pheading">Gitar Murah dan Berkualitas</h1>
 
     <section class="content">
         <h1>Pilihan Gitar Terbaik</h1>
         <p>Kualitas yang tidak Perlu diragukan Lagi</p>
         <button>Shop Now</button>
     </section>
+
+    <h1 class="pheading">Gitar Murah dan Berkualitas</h1>
 
     <section class="sec">
         <div class="products">
@@ -117,13 +116,9 @@
                 </div>
             </div>
 
-            
 
-    <script>
-        function toggleMenu() {
-            const navMenu = document.querySelector('.nav-menu');
-            navMenu.classList.toggle('active');
-        }
-    </script>
+
+    <script src="main.js"></script>
+    
 </body>
 </html>
