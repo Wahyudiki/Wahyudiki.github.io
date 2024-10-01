@@ -1,129 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Navbar</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Toko Gitar Milenial - Formulir Pemesanan</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #00ffb7 0%, #0752b5 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
+        }
+        h1 {
+            text-align: center;
+            color: #4a4a4a;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 15px;
+            font-weight: 400;
+            color: #555;
+        }
+        input, select, textarea {
+            margin-bottom: 20px;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background-color: #f0f0f0;
+            transition: all 0.3s ease;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px #d81010;
+        }
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #ff0505 100%);
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        #result {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #e8f5e9;
+            border-radius: 8px;
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .error {
+            color: #d32f2f;
+            font-size: 0.9em;
+            margin-top: -15px;
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
-
 <body>
-    <nav class="navbar">
-        <div class="navbar-container">
-            <div class="logo">Toko Gitar Milenial</div>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html">Produk</a></li>
-                <li class="nav-item"><a href="kontak.html">Kontak</a></li>
-                <li class="nav-item"><a href="tentang saya.html">Tentang Saya</a></li>
-            </ul>
-            <button class="hamburger" onclick="toggleMenu()">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
-        </div>
-    </nav>
+    <div class="container">
+        <h1>Formulir Pemesanan Gitar</h1>
+        <form id="guitarForm">
+            <label for="name">Nama</label>
+            <input type="text" id="name" name="name" required oninvalid="this.setCustomValidity('Mohon isi nama Anda')" oninput="this.setCustomValidity('')">
 
- 
-    <h1 class="pheading">Gitar Murah dan Berkualitas</h1>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required oninvalid="this.setCustomValidity('Mohon masukkan alamat email yang valid')" oninput="this.setCustomValidity('')">
 
-    <section class="content">
-        <h1>Pilihan Gitar Terbaik</h1>
-        <p>Kualitas yang tidak Perlu diragukan Lagi</p>
-        <button>Shop Now</button>
-    </section>
+            <label for="phone">Nomor Telepon</label>
+            <input type="tel" id="phone" name="phone" required oninvalid="this.setCustomValidity('Mohon masukkan nomor telepon Anda')" oninput="this.setCustomValidity('')">
 
-    <section class="sec">
-        <div class="products">
-            <div class="card">
-                <div class="img"><img src="ga.jpg" width="50px" height="50px" alt="Gitar Akustik"></div>
-                <div class="desc">Gitar Akustik</div>
-                <div class="desc">Gitar Milenial</div>
-                <div class="box">
-                    <div class="price">Rp. 1.200.000</div>
-                    <button class="btn">Buy Now</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="img"><img src="f1.jpg" alt="Gitar Bass"></div>
-                <div class="desc">Gitar Bass</div>
-                <div class="desc">Gitar Milenial</div>
-                <div class="box">
-                    <div class="price">Rp. 1.500.000</div>
-                    <button class="btn">Buy Now</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="img"><img src="f2.jpeg" alt="Gitar Bass"></div>
-                <div class="desc">Gitar Akustik Pingky</div>
-                <div class="desc">Gitar Milenial</div>
-                <div class="box">
-                    <div class="price">Rp. 1.350.000</div>
-                    <button class="btn">Buy Now</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="img"><img src="f3.webp" alt="Gitar Bass"></div>
-                <div class="desc">Gitar Klasik R2</div>
-                <div class="desc">Gitar Milenial</div>
-                <div class="box">
-                    <div class="price">Rp. 700.000</div>
-                    <button class="btn">Buy Now</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="img"><img src="f4.webp" alt="Gitar Bass"></div>
-                <div class="desc">Gitar Bass</div>
-                <div class="desc">Gitar Milenial</div>
-                <div class="box">
-                    <div class="price">Rp. 900.000</div>
-                    <button class="btn">Buy Now</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="img"><img src="gb.png" alt="Gitar Bass"></div>
-                <div class="desc">Gitar Bass </div>
-                <div class="desc">Gitar Milenial</div>
-                <div class="box">
-                    <div class="price">Rp. 1.700.000</div>
-                    <button class="btn">Buy Now</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="img"><img src="gk.jpeg" alt="Gitar Klasik"></div>
-                <div class="desc">Gitar Klasik euduro</div>
-                <div class="desc">Gitar Milenial</div>
-                <div class="box">
-                    <div class="price">Rp. 1.000.000</div>
-                    <button class="btn">Buy Now</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="img"><img src="f6.jpeg" alt="Gitar Klasik"></div>
-                <div class="desc">Gitar Listrik zy2</div>
-                <div class="desc">Gitar Milenial</div>
-                <div class="box">
-                    <div class="price">Rp. 2.000.000</div>
-                    <button class="btn">Buy Now</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="img"><img src="gl.jpg" alt="Gitar Listrik" width="100px" height="100px"></div>
-                <div class="desc">Gitar Listrik</div>
-                <div class="desc">Gitar Milenial</div>
-                <div class="box">
-                    <div class="price">Rp. 2.200.000</div>
-                    <button class="btn">Buy Now</button>
-                </div>
-            </div>
+            <label for="guitarType">Jenis Gitar</label>
+            <select id="guitarType" name="guitarType" required oninvalid="this.setCustomValidity('Mohon pilih jenis gitar')" oninput="this.setCustomValidity('')">
+                <option value="">Pilih jenis gitar</option>
+                <option value="acoustic">Gitar Akustik</option>
+                <option value="electric">Gitar Listrik</option>
+                <option value="bass">Gitar Bass</option>
+                <option value="classic">Gitar Klasik</option>
+            </select>
 
-            
+            <label for="quantity">Jumlah</label>
+            <input type="number" id="quantity" name="quantity" min="1" required oninvalid="this.setCustomValidity('Mohon masukkan jumlah gitar yang ingin dipesan (minimal 1)')" oninput="this.setCustomValidity('')">
+
+            <label for="message">Masukan Nama Gitar</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <label for="message">Pesan Tambahan</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+
+            <button type="submit">Kirim Pesanan</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
 
     <script>
-        function toggleMenu() {
-            const navMenu = document.querySelector('.nav-menu');
-            navMenu.classList.toggle('active');
-        }
+        document.getElementById('guitarForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const guitarType = document.getElementById('guitarType').value;
+            const quantity = document.getElementById('quantity').value;
+            const Nama = document.getElementById('message').value;
+            const message = document.getElementById('message').value;
+
+            const result = document.getElementById('result');
+            result.innerHTML = `
+                <h2>Detail Pesanan:</h2>
+                <p><strong>Nama:</strong> ${name}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Nomor Telepon:</strong> ${phone}</p>
+                <p><strong>Jenis Gitar:</strong> ${guitarType}</p>
+                <p><strong>Jumlah:</strong> ${quantity}</p>
+                <p><strong>Nama Gitar:</strong> ${Nama}</p>
+                <p><strong>Pesan Tambahan:</strong> ${message}</p>
+            `;
+            result.style.display = 'block';
+        });
     </script>
 </body>
 </html>
